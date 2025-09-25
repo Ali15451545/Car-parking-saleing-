@@ -84,16 +84,17 @@ renderCars(cars);
 // QR Code
 window.addEventListener("load", function() {
   var qrContainer = document.getElementById("qrcode");
-  if(qrContainer) {
-    new QRCode(qrContainer, {
-      text: window.location.href,
-      width: 120,
-      height: 120,
-      colorDark : "#000000",
-      colorLight : "#ffffff",
-      correctLevel : QRCode.CorrectLevel.H
-    });
-  }
+  qrContainer.innerHTML = ""; // əvvəlki varsa sil
+  new QRCode(qrContainer, {
+    text: window.location.href,
+    width: 120,
+    height: 120,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+  });
 });
+
+
 
 
