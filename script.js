@@ -1,9 +1,10 @@
 const cars = [
-  {title:"", price:"", gear:"Avtomatik", brand:"", img:"", phone:""},
-  {title:"", price:"", gear:"Manual", brand:"", img:"", phone:""},
-  {title:"", price:"", gear:"Avtomatik", brand:"", img:"", phone:""},
-  {title:"", price:"", gear:"Manual", brand:"", img:"", phone:""}
+  {title:"Ronaldo Sport 2018", price:"3", gear:"Avtomatik", brand:"Ronaldo", img:"", phone:"+994 70 494 33 02"},
+  {title:"Pista 2020", price:"5", gear:"Manual", brand:"Pista", img:"", phone:"+994 70 494 33 02"},
+  {title:"City Sedan 2019", price:"4", gear:"Avtomatik", brand:"City", img:"", phone:"+994 70 494 33 02"},
+  {title:"City Hatchback 2021", price:"6", gear:"Manual", brand:"City", img:"", phone:"+994 70 494 33 02"}
 ];
+
 
 const carGrid = document.getElementById("carGrid");
 const countEl = document.getElementById("count");
@@ -93,3 +94,4 @@ window.addEventListener("load", function() {
     });
   }
 });
+
