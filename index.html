@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car Parking Multiplayer - Avtomobil Satışı</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+<header>
+  <div class="brand">
+    <div class="logo">CP</div>
+    <div>
+      <h1>Car Parking Multiplayer — Avtomobil Satışı</h1>
+      <div class="subtitle">Sadə HTML, CSS & JS ilə təqdimat səhifəsi</div>
+    </div>
+  </div>
+  <div class="search-row">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.5"></circle>
+      </svg>
+      <input id="searchInput" placeholder="Avtomobil, marka, il axtar..." />
+    </div>
+    <button class="btn" id="newAdBtn">Yeni elan</button>
+  </div>
+</header>
+
+<main>
+<section class="list">
+  <div style="display:flex; align-items:center; justify-content:space-between">
+    <h2 style="margin:0">Elanlar</h2>
+    <div style="color:var(--muted); font-size:13px">Tapılan: <strong id="count">0</strong></div>
+  </div>
+  <div class="grid" id="carGrid" style="margin-top:14px"></div>
+</section>
+
+<aside class="filters">
+  <div class="sidebar-card">
+    <h3>Filtrlər</h3>
+    <label>Marka</label>
+    <select id="brandFilter">
+      <option value="">Hamısı</option>
+      <option>Ronaldo</option>
+      <option>Pista</option>
+      <option>City</option>
+    </select>
+
+    <label style="margin-top:10px">Qiymət (max)</label>
+    <input type="range" min="1" max="15" value="15" id="priceFilter">
+    <span id="priceValue" style="font-size:13px; color:var(--muted)">15 ₼</span>
+
+    <label style="margin-top:10px">Yük/tam</label>
+    <select id="gearFilter">
+      <option value="">Hamısı</option>
+      <option value="Avtomatik">Cizimli</option>
+      <option value="Manual">Normal</option>
+    </select>
+
+    <div style="margin-top:14px; display:flex; gap:8px">
+      <button class="btn" id="applyFilters">Tətbiq et</button>
+      <button class="btn-outline" id="resetFilters">Sıfırla</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b id="totalAds">0</b><span style="font-size:12px; color:var(--muted)">Elan</span></div>
+      <div class="stat"><b id="newAds">0</b><span style="font-size:12px; color:var(--muted)">Yeni</span></div>
+    </div>
+  </div>
+</aside>
+</main>
+
+<footer>
+  <div>Bu səhifə yalnız təqdimat məqsədi ilədir — Car Parking Multiplayer üçün məzmun.</div>
+  <div style="margin-top:10px; display:flex; justify-content:center; align-items:center; flex-direction:column">
+    <div id="qrcode"></div>
+    <span style="font-size:12px; color:var(--muted); margin-top:4px">Səhifəni mobil ilə açmaq üçün QR kod</span>
+  </div>
+</footer>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+</html>
