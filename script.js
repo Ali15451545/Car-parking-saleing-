@@ -28,19 +28,20 @@ function renderCars(list){
     const card=document.createElement("article");
     card.className="card fade-in";
     card.innerHTML=`
-      <div class="thumb">Şəkil əlavə edin</div>
-      <div class="card-body">
-        <div class="car-title">
-          <h4>${car.title || "Başlıq yoxdur"}</h4>
-          <div class="price">${car.price ? car.price+" ₼" : "Qiymət yoxdur"}</div>
-        </div>
-        <div class="meta">Gear: ${getGearLabel(car.gear)}</div>
-        <div class="contact">Əlaqə: ${car.phone || "Telefon yoxdur"}</div>
-        <div class="cta-row">
-          <button class="btn-outline">Ətraflı</button>
-          <button class="btn">Sifariş et</button>
-        </div>
-      </div>`;
+  <div class="thumb">Şəkil əlavə edin</div>
+  <div class="card-body">
+    <div class="car-title">
+      <h4>${car.title || "Başlıq yoxdur"}</h4>
+      <div class="price">${car.price ? car.price+" ₼" : "Qiymət yoxdur"}</div>
+    </div>
+    <div class="meta">Gear: ${getGearLabel(car.gear)}</div>
+    <div class="contact">Əlaqə: ${car.phone || "Telefon yoxdur"}</div>
+    <div class="cta-row">
+      <button class="btn-outline">Ətraflı</button>
+      <a href="tel:${car.phone}" class="btn">Əlaqə saxla</a>
+    </div>
+  </div>`;
+
     carGrid.appendChild(card);
     setTimeout(()=>card.classList.add("visible"),150*i);
   });
@@ -94,4 +95,5 @@ window.addEventListener("load", function() {
     });
   }
 });
+
 
