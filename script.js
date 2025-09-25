@@ -1,10 +1,9 @@
 const cars = [
-  {title:"Ronaldo Sport 2018", price:"3", gear:"Avtomatik", brand:"Ronaldo", img:"", phone:"+994 70 494 33 02"},
-  {title:"Pista 2020", price:"5", gear:"Manual", brand:"Pista", img:"", phone:"+994 70 494 33 02"},
-  {title:"City Sedan 2019", price:"4", gear:"Avtomatik", brand:"City", img:"", phone:"+994 70 494 33 02"},
-  {title:"City Hatchback 2021", price:"6", gear:"Manual", brand:"City", img:"", phone:"+994 70 494 33 02"}
+  {title:"", price:"", gear:"Avtomatik", brand:"", img:"", phone:""},
+  {title:"", price:"", gear:"Manual", brand:"", img:"", phone:""},
+  {title:"", price:"", gear:"Avtomatik", brand:"", img:"", phone:""},
+  {title:"", price:"", gear:"Manual", brand:"", img:"", phone:""}
 ];
-
 
 const carGrid = document.getElementById("carGrid");
 const countEl = document.getElementById("count");
@@ -68,15 +67,8 @@ priceFilter.addEventListener("input",()=>{
   priceValue.textContent = priceFilter.value + " ₼";
   applyFilters();
 });
-// Əlaqə saxla düyməsi
-document.getElementById("contactBtn").addEventListener("click", () => {
-  // Telefon açmaq üçün:
-  // window.location.href = "tel:+994704943302";
-
-  // WhatsApp açmaq üçün:
-  window.open("https://wa.me/994704943302", "_blank");
-});
-
+document.getElementById("applyFilters").addEventListener("click",applyFilters);
+document.getElementById("resetFilters").addEventListener("click",()=>{
   searchInput.value="";
   brandFilter.value="";
   gearFilter.value="";
@@ -101,5 +93,3 @@ window.addEventListener("load", function() {
     });
   }
 });
-
-
