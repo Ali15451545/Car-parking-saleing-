@@ -68,8 +68,15 @@ priceFilter.addEventListener("input",()=>{
   priceValue.textContent = priceFilter.value + " ₼";
   applyFilters();
 });
-document.getElementById("applyFilters").addEventListener("click",applyFilters);
-document.getElementById("resetFilters").addEventListener("click",()=>{
+// Əlaqə saxla düyməsi
+document.getElementById("contactBtn").addEventListener("click", () => {
+  // Telefon açmaq üçün:
+  // window.location.href = "tel:+994704943302";
+
+  // WhatsApp açmaq üçün:
+  window.open("https://wa.me/994704943302", "_blank");
+});
+
   searchInput.value="";
   brandFilter.value="";
   gearFilter.value="";
@@ -94,4 +101,5 @@ window.addEventListener("load", function() {
     });
   }
 });
+
 
